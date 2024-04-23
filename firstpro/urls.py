@@ -5,11 +5,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 from Home .views import *
 from Accounts.views import *
+from Product.views import *
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
+    path('prod/<id>/', prod_page, name='prod'),
     path('login_register/',include('Accounts.urls')),
 ]
 
